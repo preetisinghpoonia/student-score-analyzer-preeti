@@ -1,2 +1,4 @@
 # student-score-analyzer-preeti
 this is a student score analyzer in c for jecrc
+Student Score Analyzer in C
+This project analyzes quiz scores of students using the C programming language. It allows the user to enter the number of students and their scores, which are stored in a one-dimensional array. The program uses functions to calculate the average, highest, and lowest scores, demonstrating key C programming concepts such as arrays, loops, functions, conditional statements, and standard input/output. It also applies basic mathematical logic for mean calculation and comparison to identify maximum and minimum values. After processing, the program displays a report showing the class average, highest score, and lowest score. The code can be compiled using gcc student_score_analyzer.c -o analyzer and executed with ./analyzer, producing the final output with the analyzed results.
