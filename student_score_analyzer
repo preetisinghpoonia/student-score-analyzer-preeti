@@ -1,1 +1,62 @@
+#include <stdio.h>
 
+// Function to calculate mean (average)
+float findMean(int scores[], int n) {
+    int sum = 0;
+    for(int i = 0; i < n; i++) {
+        sum += scores[i];
+    }
+    return (float)sum / n;
+}
+
+// Function to find the highest score
+int findHighest(int scores[], int n) {
+    int highest = scores[0];
+    for(int i = 1; i < n; i++) {
+        if(scores[i] > highest) {
+            highest = scores[i];
+        }
+    }
+    return highest;
+}
+
+// Function to find the lowest score
+int findLowest(int scores[], int n) {
+    int lowest = scores[0];
+    for(int i = 1; i < n; i++) {
+        if(scores[i] < lowest) {
+            lowest = scores[i];
+        }
+    }
+    return lowest;
+}
+
+int main() {
+    int n;
+
+    // Step 1: Input number of students
+    printf("Enter number of students (max 10): ");
+    scanf("%d", &n);
+
+    int scores[n];
+
+    // Step 2: Input scores into array
+    printf("Enter %d scores:\n", n);
+    for(int i = 0; i < n; i++) {
+        printf("Score %d: ", i + 1);
+        scanf("%d", &scores[i]);
+    }
+
+    // Step 3: Analysis using functions
+    float mean = findMean(scores, n);
+    int highest = findHighest(scores, n);
+    int lowest = findLowest(scores, n);
+
+    // Step 4: Output results
+    printf("\n---- Class Report ----\n");
+    printf("Class Average: %.2f\n", mean);
+    printf("Highest Score: %d\n", highest);
+    printf("Lowest Score: %d\n", lowest);
+
+    return 0;
+}
